@@ -1,14 +1,20 @@
 #include <iostream>
 #include <algorithm>
-
 using namespace std;
 
-int n, k;
-int arr[1001];
-
 int main() {
-    cin >> n >> k;        
-    for(int i = 0; i < n; i++) cin >> arr[i];
-    sort(arr, arr + n);
-    cout << arr[n-k] << '\n';
+	int N, k;
+	int tmp;
+	cin >> N >> k;
+
+	int* arr = new int[N];
+	for (int i = 0; i < N; i++) {
+		cin >> arr[i];
+	}
+
+	sort(arr, arr + N);
+	cout << arr[N-k] << endl;
+
+
+	return 0;
 }
